@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js with MongoDB
 
-## Getting Started
+A simple learning project built with **Next.js (App Router)** and **MongoDB Atlas**.  
+The goal was to practice server components, client components, database queries, and deployment to Vercel.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+##  Live Deployment (Vercel)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://m5g2-nextmongo-two.vercel.app/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##  GitHub Repository
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+https://github.com/TanjaSav/m5g2-nextmongo
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## The project includes
 
-## Deploy on Vercel
+- **Client Component** (`app/front/page.tsx`)  
+  Uses `useEffect` and logs to the browser console.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Server Component** (`app/back/page.tsx`)  
+  Renders on the server and logs to the server console.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Database Component** (`app/database/page.tsx`)  
+  Connects directly to MongoDB, queries a collection, and renders the results.
+
+- **Shared Layout** (`app/layout.tsx`)  
+  Includes fonts and global styles.
+
+- **MongoDB connection**  
+  Implemented using `MongoClient` and environment variables.
