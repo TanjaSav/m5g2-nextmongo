@@ -1,6 +1,6 @@
 import {MongoClient, ServerApiVersion} from 'mongodb'
 
-const uri = process.env.MONGODB_URI
+const uri = process.env.MONGODB_URI 
 if(!uri){
     throw new Error("environment variable MONGODB_URI is not defined");
 }
@@ -19,8 +19,9 @@ async function run() {
     // Connect the client to the server (optional starting in v4.7)
     await client.connect();
     // Querying our database
-    const cursor = await client.db("test").collection("greetings").find();
+    const cursor = await client.db("test").collection("user").find();
     const array = await cursor.toArray()
+    console.log(array);
     return array;
   } finally {
     // Ensures that the client will close when you finish/error
@@ -29,8 +30,8 @@ async function run() {
 }
 
 export default async function Database() {
-    const greetings =  await run();
+    const users =  await run();
     return (<>
-        {greetings.map(greetingObj=> <h1 key={greetingObj._id.toString()}>{greetingObj.greeting}</h1>)}
+        {users.map(userObj=> <h1 key={userObj._id.toString()}>{userObj.name}</h1>)}
     </>)
   }
