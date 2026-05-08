@@ -1,12 +1,14 @@
 # Next.js with MongoDB
 
-A simple learning project built with **Next.js (App Router)** and **MongoDB Atlas**.  
+A simple learning project built with **Next.js** and **MongoDB Atlas**.  
 The goal was to practice server components, client components, database queries, and deployment to Vercel.
 
 
 ##  Live Deployment (Vercel)
-
-https://m5g2-nextmongo-two.vercel.app/
+https://m5g2-nextmongo-two.vercel.app
+https://m5g2-nextmongo-two.vercel.app/database
+https://m5g2-nextmongo-two.vercel.app/front
+https://m5g2-nextmongo-two.vercel.app/back
 
 ##  GitHub Repository
 
